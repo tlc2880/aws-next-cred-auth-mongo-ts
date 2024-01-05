@@ -1,5 +1,5 @@
 {
-  "name": "dev-cred-auth-mongo",
+  "name": "next-cred-auth-mongo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
