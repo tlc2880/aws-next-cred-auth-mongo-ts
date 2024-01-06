@@ -1,3 +1,5 @@
+# Nextjs Credential Authorization with MongoDB using TypeScript and deployed on AWS Amplify, Vercel, and Netlify
+
 # Getting Started
 ## First, install the app:
 
