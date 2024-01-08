@@ -10,6 +10,8 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const router = useRouter();
+
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
@@ -19,6 +21,21 @@ export default function RegisterForm() {
     }
 
     try {
+      const resUserExists = await fetch("api/userExists", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const { user } = await resUserExists.json();
+
+      if (user) {
+        setError("User already exists.");
+        return;
+      }
+
       const res = await fetch("api/register", {
         method: "POST",
         headers: {
@@ -33,6 +50,7 @@ export default function RegisterForm() {
 
       if (res.ok) {
         const form: any = e.target;
+        router.push("/");
         form.reset();
    
       } else {
