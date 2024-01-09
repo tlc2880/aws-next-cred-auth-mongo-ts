@@ -1,3 +1,4 @@
+import { AuthProvider } from "./Providers";
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -18,7 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="max-w-3xl mx-auto p-4">
-          <div className="mt-8">{children}</div>
+          <div className="mt-8">
+            <AuthProvider>
+              {children}
+            </AuthProvider>
+          </div>
         </div>
       </body>
     </html>
