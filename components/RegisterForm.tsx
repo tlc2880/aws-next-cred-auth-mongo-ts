@@ -50,9 +50,8 @@ export default function RegisterForm() {
 
       if (res.ok) {
         const form: any = e.target;
-        router.push("/");
         form.reset();
-   
+        router.push("/");
       } else {
         console.log("User registration failed.");
       }
