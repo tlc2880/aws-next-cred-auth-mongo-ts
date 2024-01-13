@@ -70,6 +70,7 @@ export default function RegisterForm() {
             onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Full Name"
+            // className="text-lg text-white my-4"
           />
           <input
             onChange={(e) => setEmail(e.target.value)}
@@ -81,7 +82,7 @@ export default function RegisterForm() {
             type="password"
             placeholder="Password"
           />
-          <button className="bg-green-600 text-white font-bold cursor-pointer px-6 py-2">
+          <button className="bg-green-600 text-white text-center font-bold cursor-pointer px-40 py-2">
             Register
           </button>
 
@@ -91,7 +92,7 @@ export default function RegisterForm() {
             </div>
           )}
 
-          <Link className="text-sm mt-3 text-right" href={"/"}>
+          <Link className="text-sm mt-3  text-white text-right" href={"/"}>
             Already have an account? <span className="underline">Login</span>
           </Link>
         </form>
