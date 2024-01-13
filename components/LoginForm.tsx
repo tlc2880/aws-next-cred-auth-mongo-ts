@@ -49,7 +49,7 @@ export default function LoginForm() {
             type="password"
             placeholder="Password"
           />
-          <button className="bg-green-600 text-whire font-bold cursor-pointer px-6 py-2">
+          <button className="bg-green-600 text-white font-bold cursor-pointer px-44 py-2">
             Login
           </button>
           {error && (
@@ -57,7 +57,7 @@ export default function LoginForm() {
               {error}
             </div>
           )}
-          <Link className="text-sm mt-3 text-right" href={"/register"}>
+          <Link className="text-sm  text-white mt-3 text-right" href={"/register"}>
             Do not have an account? <span className="underline">Register</span>
           </Link>
         </form>
