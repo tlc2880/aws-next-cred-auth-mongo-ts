@@ -3,7 +3,7 @@
 import { signOut } from 'next-auth/react';
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-//import RemoveBtn from "./RemoveBtn";
+import RemoveBtn from "./RemoveBtn";
 import { HiPencilAlt } from "react-icons/hi";
 
 export default function UserInfo() {
@@ -17,7 +17,7 @@ export default function UserInfo() {
           <div>Topic Description</div>
         </div>
         <div className="flex gap-2">
-          {/* <RemoveBtn /> */}
+          <RemoveBtn />
           <Link href={'/editTopic/123'}>
             <HiPencilAlt size={24} />
           </Link>
