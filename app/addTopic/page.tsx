@@ -8,7 +8,7 @@ export default function AddTopic() {
         type="text"
         placeholder="topic Title"
       />
-            <input
+      <input
         className="border border-slate-500 px-8 py-2"
         type="text"
         placeholder="topic Title"
